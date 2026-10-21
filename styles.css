@@ -1,0 +1,134 @@
+/* Small shared baseline. We can develop the visual design later. */
+:root {
+  color-scheme: light dark;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.65;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --content-width: 44rem;
+  --page-gutter: 1.25rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-underline-offset: 0.2em;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+.site-header,
+.page-content,
+.site-footer {
+  width: min(100% - 2 * var(--page-gutter), var(--content-width));
+  margin-inline: auto;
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-block: 1.5rem;
+  border-bottom: 1px solid currentColor;
+}
+
+.site-title {
+  font-weight: 700;
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+}
+
+nav a[aria-current="page"] {
+  font-weight: 700;
+}
+
+.page-content {
+  min-height: 65vh;
+  padding-block: 3rem;
+}
+
+.intro {
+  margin-bottom: 3rem;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+}
+
+.post-preview {
+  padding-block: 1.25rem;
+  border-bottom: 1px solid currentColor;
+}
+
+.post-preview h3 {
+  margin-bottom: 0.5rem;
+}
+
+.post-preview h3 a {
+  text-decoration: none;
+}
+
+.post-date {
+  font-size: 0.9rem;
+  opacity: 0.75;
+  margin-bottom: 0.5rem;
+}
+
+.prose > * {
+  max-width: 68ch;
+}
+
+.prose p {
+  margin-bottom: 1.25rem;
+}
+
+.post-header {
+  margin-bottom: 2rem;
+}
+
+.back-link {
+  margin-top: 3rem;
+}
+
+.site-footer {
+  padding-block: 1.5rem;
+  border-top: 1px solid currentColor;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.site-footer p {
+  margin-bottom: 0;
+}
+
+@media (max-width: 30rem) {
+  .site-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
